@@ -34,6 +34,7 @@ class IngredientsController < ApplicationController
 
   # GET /ingredients/1/edit
   def edit
+    @cocktail = Cocktail.find(params[:cocktail_id])
     @ingredient = Ingredient.find(params[:id])
   end
 
@@ -48,6 +49,7 @@ class IngredientsController < ApplicationController
   # PUT /ingredients/1
   # PUT /ingredients/1.json
   def update
+    @cocktail = Cocktail.find(params[:cocktail_id])
     @ingredient = Ingredient.find(params[:id])
 
     respond_to do |format|
