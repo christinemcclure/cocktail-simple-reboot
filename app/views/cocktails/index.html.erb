@@ -11,9 +11,8 @@
 <% @cocktails.each do |cocktail| %>
   <tr>
     <td><%= cocktail.name.titleize %></td>
-    <td><%= link_to 'Show recipe', cocktail %></td>
-    <td><%= link_to 'Edit', edit_cocktail_path(cocktail) %></td>
-    <td><%= link_to 'Delete', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', cocktail, :class => 'btn' %></td>
+    <td><%= link_to 'Delete', cocktail, method: :delete, :class => 'btn', data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
