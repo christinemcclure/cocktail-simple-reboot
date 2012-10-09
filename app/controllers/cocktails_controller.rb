@@ -14,6 +14,7 @@ class CocktailsController < ApplicationController
   # GET /cocktails/1.json
   def show
     @cocktail = Cocktail.find(params[:id])
+    @ingredient = Ingredient.new
 
     respond_to do |format|
       format.html # show.html.erb
