@@ -6,6 +6,20 @@
   box-sizing: border-box;
 }
 
+/* style lists */
+ul {
+  margin: 20px 0;
+  li{
+  list-style:none;
+  p {
+    display:inline-block;
+  }
+  p.lineTitle {
+      width: 40%;
+  }
+  }
+}
+
 /* miscellaneous */
 
 .debug_dump {
