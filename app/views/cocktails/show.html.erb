@@ -6,9 +6,9 @@
 <ul>
 <% @cocktail.ingredients.each do |ingredient| %>
   <li>
-    <%= ingredient.ingredient %>
-    <%= link_to 'Edit', edit_cocktail_ingredient_path(ingredient),:class => 'btn' %>
-    <%= link_to 'Delete', [ingredient.cocktail, ingredient], :class => 'btn', :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+    <p class="lineTitle"><%= ingredient.ingredient %></p>
+    <p><%= link_to 'Edit', edit_cocktail_ingredient_path(ingredient),:class => 'btn' %></p>
+    <p><%= link_to 'Delete', [ingredient.cocktail, ingredient], :class => 'btn', :method => :delete, :data => { :confirm => 'Are you sure?' } %></p>
   </li>
 <% end %>
 </ul>
@@ -20,5 +20,5 @@
 <p><%= @cocktail.notes %></p>
 
 
-<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
-<%= link_to 'Back', cocktails_path %>
+<%= link_to 'Edit Directions', edit_cocktail_path(@cocktail),:class => 'btn' %>
+<%= link_to 'Back to Cocktail List', cocktails_path,:class => 'btn' %>

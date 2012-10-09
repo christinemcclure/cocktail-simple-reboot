@@ -1,22 +1,17 @@
-<h1>Listing cocktails</h1>
+<h1>Cary's Cocktail List</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h2>Name</h2>
 
+<ul>
 <% @cocktails.each do |cocktail| %>
-  <tr>
-    <td><%= cocktail.name.titleize %></td>
-    <td><%= link_to 'Show', cocktail, :class => 'btn' %></td>
-    <td><%= link_to 'Delete', cocktail, method: :delete, :class => 'btn', data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <li><p class="lineTitle"><%= cocktail.name.titleize %></p>
+      <p><%= link_to 'Show', cocktail, :class => 'btn' %></p>
+      <p><%= link_to 'Delete', cocktail, method: :delete, :class => 'btn', data: { confirm: 'Are you sure?' } %></p>
+    </li>
+
 <% end %>
-</table>
+</ul>
 
 <br />
 
-<%= link_to 'New Cocktail', new_cocktail_path %>
+<%= link_to 'Add New Cocktail', new_cocktail_path, :class => 'btn' %>
