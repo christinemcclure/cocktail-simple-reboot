@@ -17,8 +17,7 @@
 <%= render "ingredients/form" %>
 
 <h2>Directions</h2>
-<p><%= @cocktail.notes %></p>
-
+<div class="notes"><%= simple_format @cocktail.notes %></div>
 
 <%= link_to 'Edit Directions', edit_cocktail_path(@cocktail),:class => 'btn' %>
 <%= link_to 'Back to Cocktail List', cocktails_path,:class => 'btn' %>
