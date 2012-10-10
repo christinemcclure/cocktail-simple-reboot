@@ -1,6 +1,5 @@
 ==TO DO
-* Add edit for ingredients
-* Combine cocktail and ingredients forms for clarity to user
-* Bootstrap CSS
+* Change ingredient model to use "item" instead of "ingredient" for field name
+
 
 
