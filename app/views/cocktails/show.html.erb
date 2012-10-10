@@ -20,9 +20,8 @@
 <h2>Directions</h2>
 
 <ol>
-<%=
-  @cocktail.notes.split(/\n/).each do |line|%>
-  <li><%=line%></li>
+  <%@cocktail.notes.split(/\n/).each do |line|%>
+    <li><%=line%></li>
   <%end%>
 </ol>
 
