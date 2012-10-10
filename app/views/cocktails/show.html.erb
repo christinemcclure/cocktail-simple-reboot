@@ -20,9 +20,11 @@
 <h2>Directions</h2>
 
 <ol>
-  <%@cocktail.notes.split(/\n/).each do |line|%>
-    <li><%=line%></li>
-  <%end%>
+  <%  if @cocktail.notes
+        @cocktail.notes.split(/\n/).each do |line|%>
+        <li><%=line%></li>
+        <%end%>
+      <%end%>
 </ol>
 
 <%= link_to 'Edit Directions', edit_cocktail_path(@cocktail),:class => 'btn' %>
