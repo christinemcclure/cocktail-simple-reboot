@@ -56,3 +56,31 @@ ingredients = cocktail.ingredients.create([
   {:ingredient => "maraschino cherry for garnish"}
   ])
 
+cocktail = Cocktail.create(:name => "Bellini",
+  :notes => "Pour pureed white peaches and lemon juice in bottom of a champagne flute.
+            Carefully top off with Prosecco.
+            Stir gently.
+            Garnish with peach slice.
+            A 1/4 ounce of peach schnapps may be added to the pureed white peaches to give this cocktail added punch.")
+ingredients = cocktail.ingredients.create([
+  {:ingredient => "1 ounce Pureed White Peaches or peach nectar"},
+  {:ingredient => "1/4 teaspoon Freshly Squeezed Lemon Juice"},
+  {:ingredient => "Prosecco"},
+  {:ingredient => "Peach slice for garnish"}
+])
+
+cocktail = Cocktail.create(:name => "Caipirinha",
+  :notes => "Place lime wedges in cocktail shaker, reserving one for garnish.
+            Muddle.
+            Pour Cachaca and bar syrup into cocktail shaker and fill two-thirds with ice.
+            Shake to combine well.
+            Place ice into old-fashioned glass--Do not overfill.
+            Strain contents of shaker into glass.
+            Garnish with one reserved lime wedge.")
+ingredients = cocktail.ingredients.create([
+  {:ingredient => "2 ounces Cachaca"},
+  {:ingredient => "1 lime cut into wedges"},
+  {:ingredient => "1/2 ounce simple syrup"}
+])
+
+
