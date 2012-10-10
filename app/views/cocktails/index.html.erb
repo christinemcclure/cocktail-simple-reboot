@@ -6,7 +6,8 @@
 <% @cocktails.each do |cocktail| %>
     <li><p class="lineTitle"><%= cocktail.name.titleize %></p>
       <p><%= link_to 'Show', cocktail, :class => 'btn' %></p>
-      <p><%= link_to 'Delete', cocktail, method: :delete, :class => 'btn', data: { confirm: 'Are you sure?' } %></p>
+      <% ctlStr = "#{cocktail.name.titleize}" #string interpolation of ingredient name %>
+      <p><%= link_to 'Delete', cocktail, method: :delete, :class => 'btn', data: { confirm: 'Delete the cocktail \'' + ctlStr + '\'?' } %></p>
     </li>
 
 <% end %>
