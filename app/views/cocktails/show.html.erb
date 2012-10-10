@@ -7,8 +7,9 @@
 <% @cocktail.ingredients.each do |ingredient| %>
   <li>
     <p class="lineTitle"><%= ingredient.ingredient %></p>
+    <% ingrStr = "#{ingredient.ingredient}" #string interpolation of ingredient name %>
     <p><%= link_to 'Edit', edit_cocktail_ingredient_path(@cocktail, ingredient),:class => 'btn' %></p>
-    <p><%= link_to 'Delete', [ingredient.cocktail, ingredient], :class => 'btn', :method => :delete, :data => { :confirm => 'Are you sure?' } %></p>
+    <p><%= link_to 'Delete', [ingredient.cocktail, ingredient], :class => 'btn', :method => :delete, :data => { :confirm => 'Delete \'' + ingrStr + '\'?'} %></p>
   </li>
 <% end %>
 </ul>
